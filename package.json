@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-to-postcss-mixins": "^0.0.3"
+  }
+}

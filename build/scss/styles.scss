@@ -1,0 +1,160 @@
+
+@import 'fonts';
+@import 'colors';
+@import 'mixin';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-family: 'Oswald-Regular';
+}
+
+.content1{
+	position: relative;
+	max-width: 1454px;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	@include l-desk{
+		max-width: 1300px;
+    }
+	@include m-desk{
+		max-width: 1200px;
+    }
+	@include mobile{
+		padding: 0 20px;
+		box-sizing: border-box;
+    }
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    background: none;
+    margin-top: 50px;
+
+    // background-color: black;
+
+}
+
+.header__content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+}
+
+.header__name{
+    position: absolute;
+    visibility: hidden;
+}
+
+.header__part{
+    width: 25%;
+    border-left: 1px solid #707070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo{
+    width: 22%;
+}
+
+.header__img{
+    width: 180px;
+}
+
+.header__link{
+    font-size: 25px;
+    font-weight: 300;
+    color: #FDFDFC;
+    font-family: 'Oswald-Light';
+}
+
+// .request-container{
+//     background-image: url('../img/bmw.png');
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     width: 100%;
+// }
+
+.big-banner{
+    background-image: url('../img/head.png'); 
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 1082px;
+}
+
+.big-banner__content{
+    display: flex;
+    flex-direction: row;
+    top: 20%;
+}
+
+.big-banner__container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.big-banner__imgCar{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 1290px;
+}
+
+.big-banner__text{
+    color: #FDFDFC;
+    line-height: 67px;
+    font-weight: 500;
+    font-size: 42px;
+    padding-bottom: 15px;
+}
+
+.big-banner__saleText{
+    padding-top: 25px;
+    border-top: 1px solid #CCCCCC;
+    font-family: 'Oswald-Bold';
+    color: #FFEB3B;
+    line-height: 67px;
+    letter-spacing: 3px;
+    font-size: 75px;
+}
+
+.big-banner__proposal{
+    margin-top: 67px;
+    width: 341px;
+    border: 1px solid #FDFDFC;
+    font-family: 'Oswald-Bold';
+    color: #010101;
+    padding: 10px;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: center;
+    background: #FDFDFC;
+    transition: .5s ease-out;
+    &:hover{
+        background: transparent;
+        border: 1px solid #FDFDFC;
+        color: #FDFDFC;
+    }
+}
