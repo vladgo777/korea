@@ -158,3 +158,89 @@ body {
         color: #FDFDFC;
     }
 }
+
+.description{
+    padding-top: 50px;
+}
+
+.description__imgWheel{
+    top: 5%;
+    left: -16%;
+    width: 245px;
+    position: absolute;
+    border-right: 1.5px solid #707070;
+}
+
+.description__content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.description__text{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-left: 50px;
+}
+
+.description__num{
+    width: 147px;
+}
+
+.description__textrison{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    color: #010101;
+    line-height: 45px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+}
+
+.description__risons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+
+.description__cart{
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 10px 70px ;
+    width: 22%;
+    border-right: 1.5px solid #707070;
+    &:nth-child(3){
+        border: none;
+    }
+}
+
+.description__icon{
+    width: 75px;
+}
+
+.description__advantage{
+    font-size: 30px;
+    line-height: 44px;
+}
+
+.description__textAdv{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    li {
+        list-style-type: none; 
+       }
+       li:before {
+        content: "- ";
+       }
+}
+
+.description__textAdv1{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
