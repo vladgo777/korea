@@ -108,12 +108,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 100; }
 
 .big-banner__imgCar {
   position: absolute;
   top: 30%;
   left: 15%;
+  z-index: 50;
   width: 1290px; }
 
 .big-banner__text {
@@ -219,3 +221,59 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 30px; }
+
+.request-container {
+  background-image: url("../img/bmw.png");
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 991px;
+  z-index: 50; }
+
+.request-container__imgHand {
+  bottom: 109%;
+  left: 69%;
+  z-index: 5;
+  width: 470px;
+  position: absolute; }
+
+.request-container__content {
+  display: flex;
+  justify-content: flex-end;
+  top: 20%; }
+
+.request-container__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center; }
+
+.request-container__text {
+  font-weight: bold;
+  font-size: 45px;
+  color: #FDFDFC;
+  line-height: 45px; }
+
+.request-container__text2 {
+  font-weight: bold;
+  font-size: 180px;
+  color: #707070;
+  border-bottom: 1px solid #CCCCCC;
+  line-height: 250px; }
+
+.request-container__button {
+  margin-top: 25px;
+  width: 341px;
+  border: 1px solid #FFEB3B;
+  font-family: 'Oswald-Bold';
+  color: #010101;
+  padding: 10px;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+  background: #FFEB3B;
+  transition: .5s ease-out; }
+  .request-container__button:hover {
+    background: transparent;
+    border: 1px solid #FDFDFC;
+    color: #FDFDFC; }
