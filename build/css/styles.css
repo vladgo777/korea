@@ -55,12 +55,24 @@ body {
       padding: 0 20px;
       box-sizing: border-box; } }
 
+.button-style {
+  margin-top: 25px;
+  width: 341px;
+  font-family: 'Oswald-Bold';
+  padding: 10px;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+  transition: .5s ease-out; }
+  .button-style:hover {
+    background: transparent; }
+
 .header {
   position: fixed;
   width: 100%;
   left: 0px;
   top: 0px;
-  z-index: 100;
+  z-index: 150;
   background: none;
   margin-top: 50px; }
 
@@ -104,6 +116,13 @@ body {
   flex-direction: row;
   top: 20%; }
 
+.big-banner__key {
+  position: absolute;
+  top: -89%;
+  left: -19%;
+  z-index: 50;
+  width: 550px; }
+
 .big-banner__container {
   display: flex;
   flex-direction: column;
@@ -135,19 +154,10 @@ body {
   font-size: 75px; }
 
 .big-banner__proposal {
-  margin-top: 67px;
-  width: 341px;
   border: 1px solid #FDFDFC;
-  font-family: 'Oswald-Bold';
   color: #010101;
-  padding: 10px;
-  font-size: 25px;
-  line-height: 37px;
-  text-align: center;
-  background: #FDFDFC;
-  transition: .5s ease-out; }
+  background: #FDFDFC; }
   .big-banner__proposal:hover {
-    background: transparent;
     border: 1px solid #FDFDFC;
     color: #FDFDFC; }
 
@@ -228,12 +238,13 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   height: 991px;
+  margin-top: 100px;
   z-index: 50; }
 
 .request-container__imgHand {
   bottom: 109%;
   left: 69%;
-  z-index: 5;
+  z-index: -10;
   width: 470px;
   position: absolute; }
 
@@ -262,18 +273,150 @@ body {
   line-height: 250px; }
 
 .request-container__button {
-  margin-top: 25px;
-  width: 341px;
   border: 1px solid #FFEB3B;
-  font-family: 'Oswald-Bold';
   color: #010101;
-  padding: 10px;
-  font-size: 25px;
-  line-height: 37px;
-  text-align: center;
-  background: #FFEB3B;
-  transition: .5s ease-out; }
+  background: #FFEB3B; }
   .request-container__button:hover {
-    background: transparent;
     border: 1px solid #FDFDFC;
     color: #FDFDFC; }
+
+.form__content {
+  display: flex;
+  flex-direction: column; }
+
+.form__text {
+  display: flex;
+  flex-direction: row;
+  text-align: start; }
+
+.form__textCall {
+  line-height: 45px;
+  font-weight: bold;
+  font-size: 45px; }
+
+.form__textCallback {
+  line-height: 65px;
+  margin-left: 30px;
+  font-weight: normal;
+  font-size: 20px; }
+
+.form__button {
+  border: 1px solid #FFEB3B;
+  color: #010101;
+  background: #FFEB3B; }
+  .form__button:hover {
+    border: 1px solid #000000;
+    color: #000000; }
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; }
+
+.form__description {
+  color: #CCCCCC;
+  font-size: 15px;
+  line-height: 22px;
+  padding-top: 10px; }
+
+.form__a {
+  color: #00e5ff;
+  text-decoration: underline;
+  transition: .5s ease-out; }
+  .form__a:hover {
+    color: #CCCCCC; }
+
+.proposal {
+  background-image: url("../img/Union.png");
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 1420px; }
+
+.proposal__content {
+  display: flex;
+  flex-direction: column;
+  top: 20%; }
+
+.proposal__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.proposal__textClick {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #FDFDFC;
+  padding-right: 20px;
+  line-height: 65px; }
+
+.proposal__services {
+  color: #FFEB3B;
+  line-height: 42px;
+  font-size: 60px;
+  letter-spacing: 3px; }
+
+.proposal__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: auto;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  width: 80%; }
+
+.proposal__card {
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 15px;
+  border-left: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC; }
+  .proposal__card:nth-child(6), .proposal__card:nth-child(7), .proposal__card:nth-child(8), .proposal__card:nth-child(9) {
+    border-bottom: none; }
+  .proposal__card:nth-child(1) {
+    border-left: none; }
+
+.proposal__icon {
+  padding: 30px; }
+
+.proposal__serviceText {
+  color: #FDFDFC;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px; }
+
+.proposal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 60px; }
+
+.proposal__sale {
+  font-weight: normal;
+  font-size: 30px;
+  color: #FDFDFC; }
+
+.proposal__button {
+  border: 1px solid #FDFDFC;
+  color: #010101;
+  background: #FDFDFC; }
+  .proposal__button:hover {
+    border: 1px solid #FDFDFC;
+    color: #FDFDFC; }
+
+.proposal__img1 {
+  position: absolute;
+  top: -25%;
+  right: 47%;
+  z-index: 50;
+  width: 1000px; }
+
+.proposal__img2 {
+  position: absolute;
+  top: 97%;
+  right: -14%;
+  z-index: 50;
+  width: 791px; }
