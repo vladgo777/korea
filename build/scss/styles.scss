@@ -14,11 +14,19 @@ html{
 
 a{
     text-decoration: none;
+    transition: .2s ease-out;
+    &:hover{
+        color: $grey;
+    }
 }
 
 body {
     overflow-x: hidden !important;
     font-family: 'Oswald-Regular';
+}
+
+button{
+    cursor: pointer;
 }
 
 .content1{
@@ -31,7 +39,7 @@ body {
 		max-width: 1300px;
     }
 	@include m-desk{
-		max-width: 1200px;
+		max-width: 1100px;
     }
 	@include mobile{
 		padding: 0 20px;
@@ -62,9 +70,9 @@ body {
     z-index: 150;
     background: none;
     margin-top: 50px;
-
-    // background-color: black;
-
+    @include m-desk{
+        margin-top: 20px;
+    }
 }
 
 .header__content{
@@ -356,10 +364,41 @@ body {
     }
 }
 
+.form__inputs{
+    display: flex;
+    flex-direction: row;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+    }
+}
+
+.form__field{
+    display: block;
+    border: none;
+}
+
+.form__name{
+    outline: none;
+    width: 310px;
+    height: 50px;
+    border: none;
+    font-weight: normal;
+    font-size: 20px;
+
+    border-bottom: 1px solid $grey;
+    margin-right: 130px;
+}
+
 .form__container{
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .form__description{
@@ -368,6 +407,8 @@ body {
     line-height: 22px;
     padding-top: 10px;
 }
+
+
 
 .form__a{
     color: $blue;
@@ -422,6 +463,7 @@ body {
     flex-wrap: wrap;
     padding-top: 60px;
     width: 80%;
+    z-index: 100;
 }
 
 .proposal__card{
@@ -492,4 +534,201 @@ body {
     right: -14%;
     z-index: 50;
     width: 791px;
+}
+
+.advantages{
+    margin-top: 150px;
+}
+
+.advantages__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages__cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+.advantages__num{
+    width: 599px;
+}
+
+
+.advantages__text{
+    font-weight: bold;
+    font-size: 55px;
+    color: $black;
+}
+
+.advantages__plus{
+    background-color: $black;
+    color: $white;
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.advantages__cont2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.advantages__container{
+    border-left: 1px solid $lightgrey;
+    border-right: 1px solid $lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 37px;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    margin-right: 145px;
+}
+
+.advantages__point{
+    font-size: 20px;
+    margin-bottom: 10px;
+    &:nth-child(2n){
+        margin-bottom: 40px;
+    }
+    
+    &:nth-child(6){
+        margin-bottom: 0;
+    }
+}
+
+.advantages__cont3{
+    position: absolute;
+    width: 58%;
+    top: 57%;
+    padding-left: 85px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $yellow;
+}
+
+.advantages__p{
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.footer{
+    background-image: url('../img/footer.png'); 
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 819px;
+    margin-top: 150px;
+}
+
+.footer__img{
+    top: -13%;
+    left: -16%;
+    z-index: 50;
+    position: absolute;
+    width: 703.62px;
+}
+
+.footer__content{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.footer__map{
+    display: flex;
+    width: 80%;
+    z-index: 100;
+    border: 35px solid $grey;
+    min-height: 550px;
+    background-color: $white ;
+}
+
+.footer__time{
+    font-weight: normal;
+    font-size: 25px;
+    margin: 25px 0; 
+    color: $white;
+}
+
+.footer_pay{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__bank{
+    height: 33px;
+    margin-right: 20px; 
+}
+
+.footer__infoBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__line{
+    display: flex;
+    flex-direction: row;
+    padding: 22px 0;
+    &:nth-child(2){
+        border-top: 1px solid $lightgrey;
+        border-bottom: 1px solid $lightgrey;
+    }
+}
+
+.footer__container2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: auto;
+}
+
+.footer__icon{
+    margin: 0 20px;
+    height: 30px;
+}
+
+.footer__place{
+    font-family: 'Oswald-Light';
+    color: $white;
+    font-size: 27px;
+}
+
+.footer__apps{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__appIcon{
+    margin-right: 20px;
+    width: 55px;
+    height: 55px;
+}
+
+
+.footer__condition{
+    padding-top: 25px;
+    font-weight: normal;
+    font-size: 15px;
+    color: $white;
+    line-height: 22px;
+    font-family: 'Oswald-Light';
+}
+
+.border--style{
+    border-bottom: 1px solid $lightgrey;
+    padding-bottom: 35px;
 }

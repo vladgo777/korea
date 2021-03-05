@@ -23,7 +23,9 @@ function browserSyncTask() {
 		notify: false
 		});
 	
+
 	watch('build/**/*.scss', sassTask);
+	watch('build/img/*.png').on('change', browserSync.reload);
 	watch('build/*.html').on('change', browserSync.reload);
 	watch('build/js/*.js').on('change', browserSync.reload);	
 }
