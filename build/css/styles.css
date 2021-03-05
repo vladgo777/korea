@@ -62,14 +62,19 @@ button {
       box-sizing: border-box; } }
 
 .button-style {
-  margin-top: 25px;
-  width: 341px;
   font-family: 'Oswald-Bold';
-  padding: 10px;
-  font-size: 25px;
   line-height: 37px;
   text-align: center;
-  transition: .5s ease-out; }
+  transition: .5s ease-out;
+  padding: 10px;
+  margin-top: 25px;
+  width: 341px;
+  font-size: 25px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .button-style {
+      padding: 8px;
+      width: 280px;
+      font-size: 20px; } }
   .button-style:hover {
     background: transparent; }
 
@@ -106,19 +111,28 @@ button {
 
 .header__img {
   width: 180px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .header__img {
+      width: 150px; } }
 
 .header__link {
-  font-size: 25px;
   font-weight: 300;
   color: #FDFDFC;
-  font-family: 'Oswald-Light'; }
+  font-family: 'Oswald-Light';
+  font-size: 25px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .header__link {
+      font-size: 20px; } }
 
 .big-banner {
   background-image: url("../img/head.png");
-  background-size: auto;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   height: 1082px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .big-banner {
+      height: 900px; } }
 
 .big-banner__content {
   display: flex;
@@ -131,6 +145,11 @@ button {
   left: -19%;
   z-index: 50;
   width: 550px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .big-banner__key {
+      top: -80%;
+      left: -22%;
+      width: 450px; } }
 
 .big-banner__container {
   display: flex;
@@ -145,22 +164,34 @@ button {
   left: 15%;
   z-index: 50;
   width: 1290px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .big-banner__imgCar {
+      top: 40%;
+      width: 1100px; } }
 
 .big-banner__text {
   color: #FDFDFC;
-  line-height: 67px;
   font-weight: 500;
-  font-size: 42px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  line-height: 67px;
+  font-size: 42px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .big-banner__text {
+      line-height: 55px;
+      font-size: 33px; } }
 
 .big-banner__saleText {
   padding-top: 25px;
   border-top: 1px solid #CCCCCC;
   font-family: 'Oswald-Bold';
   color: #FFEB3B;
-  line-height: 67px;
   letter-spacing: 3px;
+  line-height: 67px;
   font-size: 75px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .big-banner__saleText {
+      line-height: 60px;
+      font-size: 62px; } }
 
 .big-banner__proposal {
   border: 1px solid #FDFDFC;
@@ -175,10 +206,14 @@ button {
 
 .description__imgWheel {
   top: 5%;
-  left: -16%;
-  width: 245px;
   position: absolute;
-  border-right: 1.5px solid #707070; }
+  border-right: 1.5px solid #707070;
+  left: -16%;
+  width: 245px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__imgWheel {
+      left: -20%;
+      width: 215px; } }
 
 .description__content {
   display: flex;
@@ -190,9 +225,15 @@ button {
   flex-direction: row;
   align-items: flex-end;
   padding-left: 50px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__text {
+      padding-left: 10px; } }
 
 .description__num {
   width: 147px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__num {
+      width: 130px; } }
 
 .description__textrison {
   font-style: normal;
@@ -202,6 +243,10 @@ button {
   line-height: 45px;
   padding-left: 20px;
   padding-bottom: 25px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__textrison {
+      line-height: 40px;
+      padding-left: 10px; } }
 
 .description__risons {
   display: flex;
@@ -217,20 +262,34 @@ button {
   padding: 10px 70px;
   width: 22%;
   border-right: 1.5px solid #707070; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__cart {
+      padding: 10px 40px; } }
   .description__cart:nth-child(3) {
     border: none; }
 
 .description__icon {
   width: 75px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__icon {
+      width: 50px; } }
 
 .description__advantage {
   font-size: 30px;
   line-height: 44px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__advantage {
+      font-size: 25px;
+      line-height: 35px; } }
 
 .description__textAdv {
   font-weight: normal;
   font-size: 20px;
   line-height: 30px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__textAdv {
+      font-size: 16px;
+      line-height: 30px; } }
   .description__textAdv li {
     list-style-type: none; }
   .description__textAdv li:before {
@@ -240,15 +299,23 @@ button {
   font-weight: normal;
   font-size: 20px;
   line-height: 30px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .description__textAdv1 {
+      font-size: 16px;
+      line-height: 10px; } }
 
 .request-container {
   background-image: url("../img/bmw.png");
-  background-size: auto;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  z-index: 50;
   height: 991px;
-  margin-top: 100px;
-  z-index: 50; }
+  margin-top: 100px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .request-container {
+      height: 850px;
+      margin-top: 50px; } }
 
 .request-container__imgHand {
   bottom: 109%;
@@ -256,6 +323,10 @@ button {
   z-index: -10;
   width: 470px;
   position: absolute; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .request-container__imgHand {
+      bottom: 105%;
+      width: 400px; } }
 
 .request-container__content {
   display: flex;
@@ -270,16 +341,24 @@ button {
 
 .request-container__text {
   font-weight: bold;
-  font-size: 45px;
   color: #FDFDFC;
-  line-height: 45px; }
+  line-height: 45px;
+  font-size: 45px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .request-container__text {
+      line-height: 40px;
+      font-size: 40px; } }
 
 .request-container__text2 {
   font-weight: bold;
   font-size: 180px;
+  line-height: 250px;
   color: #707070;
-  border-bottom: 1px solid #CCCCCC;
-  line-height: 250px; }
+  border-bottom: 1px solid #CCCCCC; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .request-container__text2 {
+      line-height: 200px;
+      font-size: 150px; } }
 
 .request-container__button {
   border: 1px solid #FFEB3B;
@@ -302,12 +381,20 @@ button {
   line-height: 45px;
   font-weight: bold;
   font-size: 45px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .form__textCall {
+      line-height: 40px;
+      font-size: 40px; } }
 
 .form__textCallback {
   line-height: 65px;
   margin-left: 30px;
   font-weight: normal;
   font-size: 20px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .form__textCallback {
+      line-height: 62px;
+      font-size: 15px; } }
 
 .form__button {
   border: 1px solid #FFEB3B;
@@ -341,19 +428,31 @@ button {
   border: none;
   font-weight: normal;
   font-size: 20px;
-  border-bottom: 1px solid #707070;
-  margin-right: 130px; }
+  margin-right: 130px;
+  border-bottom: 1px solid #707070; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .form__name {
+      font-size: 15px;
+      height: 40px;
+      margin-right: 90px; } }
 
 .form__container {
   display: flex;
   flex-direction: column;
   padding-top: 50px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .form__container {
+      padding-top: 40px; } }
 
 .form__description {
   color: #CCCCCC;
   font-size: 15px;
   line-height: 22px;
   padding-top: 10px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .form__description {
+      font-size: 12px;
+      line-height: 18px; } }
 
 .form__a {
   color: #00e5ff;
@@ -364,15 +463,21 @@ button {
 
 .proposal {
   background-image: url("../img/Union.png");
-  background-size: auto;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   height: 1420px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal {
+      height: 1200px; } }
 
 .proposal__content {
   display: flex;
   flex-direction: column;
   top: 20%; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__content {
+      top: 17%; } }
 
 .proposal__text {
   display: flex;
@@ -386,12 +491,21 @@ button {
   color: #FDFDFC;
   padding-right: 20px;
   line-height: 65px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__textClick {
+      line-height: 55px;
+      font-size: 25px; } }
 
 .proposal__services {
   color: #FFEB3B;
   line-height: 42px;
   font-size: 60px;
   letter-spacing: 3px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__services {
+      line-height: 35px;
+      font-size: 50px;
+      letter-spacing: 2px; } }
 
 .proposal__buttons {
   display: flex;
@@ -402,6 +516,9 @@ button {
   padding-top: 60px;
   width: 80%;
   z-index: 100; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__buttons {
+      padding-top: 40px; } }
 
 .proposal__card {
   width: 16%;
@@ -411,6 +528,9 @@ button {
   padding: 30px 15px;
   border-left: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__card {
+      padding: 20px 10px; } }
   .proposal__card:nth-child(6), .proposal__card:nth-child(7), .proposal__card:nth-child(8), .proposal__card:nth-child(9) {
     border-bottom: none; }
   .proposal__card:nth-child(1) {
@@ -418,12 +538,19 @@ button {
 
 .proposal__icon {
   padding: 30px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__icon {
+      transform: scale(0.8);
+      padding: 15px; } }
 
 .proposal__serviceText {
   color: #FDFDFC;
   text-align: center;
   font-weight: normal;
   font-size: 20px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__serviceText {
+      font-size: 16px; } }
 
 .proposal__container {
   display: flex;
@@ -450,6 +577,11 @@ button {
   right: 47%;
   z-index: 50;
   width: 1000px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__img1 {
+      right: 60%;
+      top: 5%;
+      width: 700px; } }
 
 .proposal__img2 {
   position: absolute;
@@ -457,6 +589,11 @@ button {
   right: -14%;
   z-index: 50;
   width: 791px; }
+  @media screen and (min-width: 1281px) and (max-width: 1550px) {
+    .proposal__img2 {
+      right: -19%;
+      top: 97%;
+      width: 650px; } }
 
 .advantages {
   margin-top: 150px; }
@@ -528,7 +665,7 @@ button {
 
 .footer {
   background-image: url("../img/footer.png");
-  background-size: auto;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   height: 819px;

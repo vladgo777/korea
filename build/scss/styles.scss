@@ -49,14 +49,19 @@ button{
 
 
 .button-style{
-    margin-top: 25px;
-    width: 341px;
     font-family: 'Oswald-Bold';
-    padding: 10px;
-    font-size: 25px;
     line-height: 37px;
     text-align: center;
     transition: .5s ease-out;
+    padding: 10px;
+    margin-top: 25px;
+    width: 341px;
+    font-size: 25px;
+    @include m-desk{
+        padding: 8px;
+        width: 280px;
+        font-size: 20px;
+    }
     &:hover{
         background: transparent;
     }
@@ -97,17 +102,24 @@ button{
 
 .header__logo{
     width: 22%;
+    
 }
 
 .header__img{
     width: 180px;
+    @include m-desk{
+        width: 150px;
+    }
 }
 
 .header__link{
-    font-size: 25px;
     font-weight: 300;
     color: $white;
     font-family: 'Oswald-Light';
+    font-size: 25px;
+    @include m-desk{
+        font-size: 20px;
+    }
 }
 
 // .request-container{
@@ -119,10 +131,13 @@ button{
 
 .big-banner{
     background-image: url('../img/head.png'); 
-    background-size: auto;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 1082px;
+    @include m-desk{
+        height: 900px;
+    }
 }
 
 
@@ -139,6 +154,11 @@ button{
     left: -19%;
     z-index: 50;
     width: 550px;
+    @include m-desk{
+        top: -80%;
+        left: -22%;
+        width: 450px;
+    }
 }
 
 .big-banner__container{
@@ -155,14 +175,22 @@ button{
     left: 15%;
     z-index: 50;
     width: 1290px;
+    @include m-desk{
+        top: 40%;
+        width: 1100px;
+    }
 }
 
 .big-banner__text{
     color: $white;
-    line-height: 67px;
     font-weight: 500;
-    font-size: 42px;
     padding-bottom: 15px;
+    line-height: 67px;
+    font-size: 42px;
+    @include m-desk{
+        line-height: 55px;
+        font-size: 33px;
+    }
 }
 
 .big-banner__saleText{
@@ -170,9 +198,13 @@ button{
     border-top: 1px solid #CCCCCC;
     font-family: 'Oswald-Bold';
     color: $yellow;
-    line-height: 67px;
     letter-spacing: 3px;
+    line-height: 67px;
     font-size: 75px;
+    @include m-desk{
+        line-height: 60px;
+        font-size: 62px;
+    }
 }
 
 .big-banner__proposal{
@@ -187,14 +219,19 @@ button{
 
 .description{
     padding-top: 50px;
+    
 }
 
 .description__imgWheel{
     top: 5%;
-    left: -16%;
-    width: 245px;
     position: absolute;
     border-right: 1.5px solid $grey;
+    left: -16%;
+    width: 245px;
+    @include m-desk{
+        left: -20%;
+        width: 215px;
+    }    
 }
 
 
@@ -210,10 +247,16 @@ button{
     flex-direction: row;
     align-items: flex-end;
     padding-left: 50px;
+    @include m-desk{
+        padding-left: 10px;
+    }
 }
 
 .description__num{
     width: 147px;
+    @include m-desk{
+        width: 130px;
+    }
 }
 
 .description__textrison{
@@ -224,6 +267,10 @@ button{
     line-height: 45px;
     padding-left: 20px;
     padding-bottom: 25px;
+    @include m-desk{
+        line-height: 40px;
+        padding-left: 10px;
+    }
 }
 
 .description__risons{
@@ -239,6 +286,10 @@ button{
     line-height: 30px;
     font-size: 20px;
     padding: 10px 70px ;
+    
+    @include m-desk{
+        padding: 10px 40px;
+    }
     width: 22%;
     border-right: 1.5px solid $grey;
     &:nth-child(3){
@@ -248,17 +299,30 @@ button{
 
 .description__icon{
     width: 75px;
+    
+    @include m-desk{
+        width: 50px;
+    }
 }
 
 .description__advantage{
     font-size: 30px;
     line-height: 44px;
+    
+    @include m-desk{
+        font-size: 25px;
+        line-height: 35px;
+    }
 }
 
 .description__textAdv{
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+    @include m-desk{
+        font-size: 16px;
+        line-height: 30px;
+    }
     li {
         list-style-type: none; 
        }
@@ -271,16 +335,24 @@ button{
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+    @include m-desk{
+        font-size: 16px;
+        line-height: 10px;
+    }
 }
 
 .request-container{
     background-image: url('../img/bmw.png'); 
-    background-size: auto;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    z-index: 50;
     height: 991px;
     margin-top: 100px;
-    z-index: 50;
+    @include m-desk{
+        height: 850px;
+        margin-top: 50px;
+    }
 }
 
 .request-container__imgHand{
@@ -289,6 +361,10 @@ button{
     z-index: -10;
     width: 470px;
     position: absolute;
+    @include m-desk{
+        bottom: 105%;
+        width: 400px;
+    }
 }
 
 .request-container__content{
@@ -306,17 +382,26 @@ button{
 
 .request-container__text{
     font-weight: bold;
-    font-size: 45px;
     color: $white;
     line-height: 45px;
+    font-size: 45px;
+    
+    @include m-desk{
+        line-height: 40px;
+        font-size: 40px;
+    }
 }
 
 .request-container__text2{
     font-weight: bold;
     font-size: 180px;
+    line-height: 250px;
+    @include m-desk{
+        line-height: 200px;
+        font-size: 150px;
+    }
     color: $grey;
     border-bottom: 1px solid #CCCCCC;
-    line-height: 250px;
 }
 
 .request-container__button{
@@ -345,6 +430,11 @@ button{
     line-height: 45px;
     font-weight: bold;
     font-size: 45px;
+    
+    @include m-desk{
+        line-height: 40px;
+        font-size: 40px;
+    }
 }
 
 .form__textCallback{
@@ -352,6 +442,11 @@ button{
     margin-left: 30px;
     font-weight: normal;
     font-size: 20px;
+    
+    @include m-desk{
+        line-height: 62px;
+        font-size: 15px;
+    }
 }
 
 .form__button {
@@ -390,15 +485,22 @@ button{
     border: none;
     font-weight: normal;
     font-size: 20px;
-
-    border-bottom: 1px solid $grey;
     margin-right: 130px;
+    @include m-desk{
+        font-size: 15px;
+        height: 40px;
+        margin-right: 90px;
+    }
+    border-bottom: 1px solid $grey;
 }
 
 .form__container{
     display: flex;
     flex-direction: column;
     padding-top: 50px;
+    @include m-desk{
+        padding-top: 40px;
+    }
 }
 
 .form__description{
@@ -406,6 +508,12 @@ button{
     font-size: 15px;
     line-height: 22px;
     padding-top: 10px;
+    
+    @include m-desk{
+        font-size: 12px;
+        line-height: 18px;
+
+    }
 }
 
 
@@ -421,16 +529,23 @@ button{
 
 .proposal{
     background-image: url('../img/Union.png'); 
-    background-size: auto;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 1420px;
+    
+    @include m-desk{
+        height: 1200px;
+    }
 }
 
 .proposal__content{
     display: flex;
     flex-direction: column;
     top: 20%;
+    @include m-desk{
+        top: 17%;
+    }
 }
 
 .proposal__text{
@@ -446,12 +561,22 @@ button{
     color: $white;
     padding-right: 20px;
     line-height: 65px;
+    @include m-desk{
+        line-height: 55px;
+        font-size: 25px;
+    }
 }
 
 .proposal__services{
     color: $yellow;
     line-height: 42px;
     font-size: 60px;
+    
+    @include m-desk{
+        line-height: 35px;
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
     letter-spacing: 3px;
 }
 
@@ -462,6 +587,10 @@ button{
     margin-left: auto;
     flex-wrap: wrap;
     padding-top: 60px;
+    
+    @include m-desk{
+        padding-top: 40px;
+    }
     width: 80%;
     z-index: 100;
 }
@@ -472,6 +601,9 @@ button{
     flex-direction: column;
     text-align: center;
     padding: 30px 15px;
+    @include m-desk{
+        padding: 20px 10px;
+    }
     border-left: 1px solid $lightgrey;
     border-bottom: 1px solid $lightgrey;
     &:nth-child(6),
@@ -487,6 +619,10 @@ button{
 
 .proposal__icon{
     padding: 30px;
+    @include m-desk{
+        transform: scale(.8);
+        padding: 15px;
+    }
 }
 
 .proposal__serviceText{
@@ -494,6 +630,10 @@ button{
     text-align: center;
     font-weight: normal;
     font-size: 20px;
+    
+    @include m-desk{
+        font-size: 16px;
+    }
 }
 
 .proposal__container{
@@ -526,6 +666,11 @@ button{
     right: 47%;
     z-index: 50;
     width: 1000px;
+    @include m-desk{
+        right: 60%;
+        top: 5%;
+        width: 700px;
+    }
 }
 
 .proposal__img2{
@@ -534,6 +679,11 @@ button{
     right: -14%;
     z-index: 50;
     width: 791px;
+    @include m-desk{
+        right: -19%;
+        top: 97%;
+        width: 650px;
+    }
 }
 
 .advantages{
@@ -621,7 +771,7 @@ button{
 
 .footer{
     background-image: url('../img/footer.png'); 
-    background-size: auto;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 819px;
