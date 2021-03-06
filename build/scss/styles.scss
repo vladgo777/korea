@@ -21,8 +21,11 @@ a{
 }
 
 body {
-    overflow-x: hidden !important;
     font-family: 'Oswald-Regular';
+}
+
+.body{
+    overflow-x: hidden !important;
 }
 
 button{
