@@ -47,11 +47,16 @@ button{
     @include sm-desk{
         max-width: 1000px;
     }
+    @include tablet{
+        max-width: 900px;
+    }
 	@include mobile{
 		padding: 0 20px;
 		box-sizing: border-box;
     }
 }
+
+
 
 
 .button-style{
@@ -73,10 +78,175 @@ button{
         width: 220px;
         font-size: 16px;
     }
+    @include tablet{
+        font-size: 25px;
+        line-height: 37px;
+        width: 376px;
+    }
 
     &:hover{
         background: transparent;
     }
+}
+
+
+
+.burger-bg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    border: 1px solid $white;
+    width: 71px;
+    height: 71px;
+}
+
+.burger{
+    outline: none;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span{
+        display: block;
+          position: absolute;
+          margin: 0px;
+          height: 4px;
+          width: 38px;
+          background: $white;
+          left: 0;
+          transform: rotate(0deg);
+          transition: .25s ease-in-out;
+          &:nth-child(1){
+                top: 0px;
+                transition: .25s ease-in-out;
+          }
+          &:nth-child(2){
+              top: 11px;
+          }
+          &:nth-child(3){
+              top: 21px;
+          }
+    }
+    &.open{
+        span{
+            &:nth-child(1){
+                top: 12px;
+                width: 0%;
+                left: 50%;
+            }  
+            &:nth-child(2){
+                transform: rotate(45deg);
+            }
+            &:nth-child(3){
+                top: 12px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+.mobileHeader{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 150;
+    background: none;
+    padding-top: 50px;
+    transition: .3s ease-out;
+    display: none;
+    @include tablet{
+        display: block;
+    }
+    &.background{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: $black;
+        transition: .3s ease-out;
+    }
+}
+
+.mobileHeader__li{
+    display: none;
+    width: 291px;
+    background-color: $white;
+    position: absolute;
+    right: 516px;
+    color: $black;
+    transition: .5s ease-in-out;
+    &.open{
+        transition: .5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mobileHeader__link1{
+    color: $black;
+    font-size: 25px;
+    border-top: 1px solid $grey;
+    text-align: start;
+    padding: 18px;
+    line-height: 37px;
+    &:nth-child(2){
+        border-bottom: 1px solid $grey;
+    }
+}
+
+.mobileHeader__content{
+    display: flex;
+    flex-direction: row;
+}
+
+.mobileHeader__leftSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+.mobileHeader__rightSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    font-family: 'Oswald-Light';
+}
+
+.mobileHeader__link{
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 300;
+    color: $white;
+    padding-right: 20px;
+    font-family: 'Oswald-Light';
+    font-size: 25px;
+}
+
+.mobileHeader__proposal{
+    border: 1px solid $yellow;
+    color: #010101;
+    background:  $yellow;
+    margin-top: 0;
+    height: 73px;
+    width: 200px;
+    &:hover{
+        border: 1px solid $white;
+        color: $white;
+    }
+}
+
+.mobileHeader__img{
+    height: 73px;
+    margin-left: 20px;
+    
 }
 
 .header{
@@ -86,14 +256,26 @@ button{
     top: 0px;
     z-index: 150;
     background: none;
-    margin-top: 50px;
+    padding-top: 50px;
+    transition: .3s ease-out;
     @include m-desk{
-        margin-top: 20px;
+        padding-top: 20px;
     }
     @include sm-desk{
-        margin-top: 10px;
+        padding-top: 10px;
+    }
+    @include tablet{
+        display: none;
+    }
+    &.background{ 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: $black;
+        transition: .3s ease-out;
     }
 }
+
+
 
 .header__content{
     display: flex;
@@ -174,6 +356,11 @@ button{
         background-size: 100% 95%;
         height: 700px;
     }
+    @include tablet{
+        background-image: url('../img/head1.png') ; 
+        height: 900px;
+    }
+
 }
 
 
@@ -184,6 +371,9 @@ button{
     top: 20%;
     @include sm-desk{
         top: 25;
+    }
+    @include tablet{
+        top: 15%;
     }
 }
 
@@ -202,6 +392,9 @@ button{
         top: -70%;
         left: -16%;
         width: 300px;
+    }
+    @include tablet{
+        display: none;
     }
 }
 
@@ -229,6 +422,10 @@ button{
         left: 25%;
         width: 850px;
     }
+    @include tablet {
+        width: 846px;
+        top: 65%;
+    }
 }
 
 .big-banner__text{
@@ -245,7 +442,10 @@ button{
         line-height: 35px;
         font-size: 25px;
     }
-
+    @include tablet {
+        font-size: 35px;
+        line-height: 52px;
+    }
 }
 
 .big-banner__saleText{
@@ -265,6 +465,11 @@ button{
         line-height: 30px;
         font-size: 50px;
     }
+    @include tablet{
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 83px;
+    }
 
 }
 
@@ -275,6 +480,68 @@ button{
     &:hover{
         border: 1px solid $white;
         color: $white;
+    }
+}
+
+.table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.table__content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.table__repair{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    color: #010101;
+    line-height: 45px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    @include m-desk{
+        line-height: 40px;
+        padding-left: 10px;
+    }
+    
+    @include sm-desk{
+        line-height: 35px;
+        padding-left: 10px;
+        font-size: 38px;
+    }
+}
+
+.table__prices{
+    width: 100%;
+    background-color: $lightgrey;
+    border-collapse: collapse;
+    td,th{
+        padding: 12px;
+        text-align: start;
+        border: 1px solid $lightgrey;
+    }
+    td{
+        background-color: $white;
+        font-size: 14px;
+    }
+    th{
+        background-color: $yellow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .col__1{
+        width: 55%;
+    }
+    .col__2{
+        width: 22.5%;
+    }
+    .col__3{
+        width: 22.5%;
     }
 }
 
@@ -682,7 +949,7 @@ button{
     background-position: top center;
     background-repeat: no-repeat;
     height: 1420px;
-    
+    margin-top: 100px;
     @include m-desk{
         background-size: cover;
         height: 1200px;
@@ -690,6 +957,7 @@ button{
     @include sm-desk{
         background-size: 100% 95%;
         height: 950px;
+        margin-top: 50px;
     }
 }
 
@@ -702,6 +970,31 @@ button{
     }
     @include sm-desk{
         top: 17%;
+    }
+
+}
+
+
+.proposal__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.proposal__call{
+    bottom: 119%;
+    left: 40%;
+    z-index: -10;
+    width: 710px;
+    position: absolute;
+    @include m-desk{
+        bottom: 114%;
+        width: 600px;
+    }
+    @include sm-desk{
+        bottom: 114%;
+        width: 450px;
     }
 }
 
