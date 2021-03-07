@@ -23,12 +23,12 @@ var menu = $(".header");
 var menu1 = $(".mobileHeader");
   $(window).scroll(function() {
     var top = $(this).scrollTop();
-    if ( top >= 100 ) {
+    if ( top >= 20 ) {
       menu.addClass('background');
       menu1.addClass('background');
       $('.burger').removeClass('open');
       $('.mobileHeader__li').removeClass('open');
-    } else if ( top <= 200 ) {
+    } else if ( top <= 80 ) {
         menu.removeClass('background');
         menu1.removeClass('background');
     }
