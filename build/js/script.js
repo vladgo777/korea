@@ -21,6 +21,8 @@ var menu1 = $(".mobileHeader");
     if ( top >= 100 ) {
       menu.addClass('background');
       menu1.addClass('background');
+      $('.burger').removeClass('open');
+      $('.mobileHeader__li').removeClass('open');
     } else if ( top <= 200 ) {
         menu.removeClass('background');
         menu1.removeClass('background');
