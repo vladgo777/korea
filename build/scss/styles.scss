@@ -544,9 +544,11 @@ button{
     }
     .col__2{
         width: 22.5%;
+        text-align: center;
     }
     .col__3{
         width: 22.5%;
+        text-align: center;
     }
 }
 
@@ -779,6 +781,9 @@ button{
         background-size: cover ;
         height: 800px;
         margin-top: 10px;
+    }
+    @include tablet {
+        background-size: auto 100%;
     }
 }
 
@@ -1027,6 +1032,23 @@ button{
 
 }
 
+.proposal__a{
+    transition: .2s ease-out;
+        &:hover{
+            color: $grey;
+        }
+}
+
+
+.proposal__serviceText{
+    transition: .2s ease-out;
+    &.hover{
+        color: $grey;
+    }
+    &:hover{
+        color: $grey;
+    }
+}
 
 .proposal__inner{
     display: flex;
@@ -1139,7 +1161,7 @@ button{
 }
 
 .proposal__icon{
-    padding: 30px;
+    padding: 35px;
     @include m-desk{
         transform: scale(.8);
         padding: 15px;

@@ -474,9 +474,11 @@ button {
   .table__prices .col__1 {
     width: 55%; }
   .table__prices .col__2 {
-    width: 22.5%; }
+    width: 22.5%;
+    text-align: center; }
   .table__prices .col__3 {
-    width: 22.5%; }
+    width: 22.5%;
+    text-align: center; }
 
 .description {
   padding-top: 50px; }
@@ -674,6 +676,9 @@ button {
       background-size: cover;
       height: 800px;
       margin-top: 10px; } }
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .request-container {
+      background-size: auto 100%; } }
 
 .request-container__imgHand {
   bottom: 109%;
@@ -886,6 +891,18 @@ button {
     .proposal__content {
       top: 17%; } }
 
+.proposal__a {
+  transition: .2s ease-out; }
+  .proposal__a:hover {
+    color: #707070; }
+
+.proposal__serviceText {
+  transition: .2s ease-out; }
+  .proposal__serviceText.hover {
+    color: #707070; }
+  .proposal__serviceText:hover {
+    color: #707070; }
+
 .proposal__inner {
   display: flex;
   flex-direction: column;
@@ -981,7 +998,7 @@ button {
     border-left: none; }
 
 .proposal__icon {
-  padding: 30px; }
+  padding: 35px; }
   @media screen and (min-width: 1281px) and (max-width: 1550px) {
     .proposal__icon {
       transform: scale(0.8);
