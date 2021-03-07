@@ -197,6 +197,15 @@ button{
     }
 }
 
+.mobileHeader__logo{
+    @include tablet{
+        display: flex;
+    }
+    @include mobile{
+        display: flex;
+    }
+}
+
 .mobileHeader__li{
     display: none;
     width: 305px;
@@ -221,15 +230,7 @@ button{
         }
         opacity: 1;
     }
-    &:nth-child(3){
-        display: none;
-    }
     
-	@include mobile{
-        &:nth-child(3){
-            display: block;
-        }
-    }
 }
 
 .mobileHeader__link1{
@@ -238,7 +239,7 @@ button{
     text-align: start;
     padding: 18px;
     line-height: 37px;
-    &:nth-child(2){
+    &:nth-child(3){
         border-top: 1px solid $grey;
     }
     @include mobile{
@@ -312,6 +313,10 @@ button{
     &:hover{
         border: 1px solid $white;
         color: $white;
+    }
+    display: none;
+    @include mobile{
+        display: block;
     }
 }
 
@@ -1160,6 +1165,7 @@ button{
     width: 310px;
     height: 50px;
     border: none;
+    background-color: inherit;
     font-weight: normal;
     font-size: 20px;
     margin-right: 130px;

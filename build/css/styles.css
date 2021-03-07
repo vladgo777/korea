@@ -182,6 +182,14 @@ button {
     background-color: #000000;
     transition: .3s ease-out; }
 
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .mobileHeader__logo {
+    display: flex; } }
+
+@media screen and (min-width: 300px) and (max-width: 640px) {
+  .mobileHeader__logo {
+    display: flex; } }
+
 .mobileHeader__li {
   display: none;
   width: 305px;
@@ -205,11 +213,6 @@ button {
     @media screen and (min-width: 300px) and (max-width: 640px) {
       .mobileHeader__li.open {
         top: 116%; } }
-  .mobileHeader__li:nth-child(3) {
-    display: none; }
-  @media screen and (min-width: 300px) and (max-width: 640px) {
-    .mobileHeader__li:nth-child(3) {
-      display: block; } }
 
 .mobileHeader__link1 {
   color: #000000;
@@ -217,7 +220,7 @@ button {
   text-align: start;
   padding: 18px;
   line-height: 37px; }
-  .mobileHeader__link1:nth-child(2) {
+  .mobileHeader__link1:nth-child(3) {
     border-top: 1px solid #707070; }
   @media screen and (min-width: 300px) and (max-width: 640px) {
     .mobileHeader__link1 {
@@ -277,10 +280,14 @@ button {
   background: #FFEB3B;
   margin-top: 0;
   height: 73px;
-  width: 300px; }
+  width: 300px;
+  display: none; }
   .mobileHeader__proposal1:hover {
     border: 1px solid #FDFDFC;
     color: #FDFDFC; }
+  @media screen and (min-width: 300px) and (max-width: 640px) {
+    .mobileHeader__proposal1 {
+      display: block; } }
 
 .mobileHeader__img {
   height: 76px;
@@ -1002,6 +1009,7 @@ button {
   width: 310px;
   height: 50px;
   border: none;
+  background-color: inherit;
   font-weight: normal;
   font-size: 20px;
   margin-right: 130px;
