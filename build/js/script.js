@@ -49,3 +49,59 @@ var menu1 = $(".mobileHeader");
     //   $('header').fadeToggle(400);
     // } 
 });
+
+$('.button-style').magnificPopup();
+
+$( document ).ready(function() {
+	$('button[type="submit"]').click(function(){
+	
+	/*Валидация полей формы*/
+	$('#feedback').validate({
+	//Правила валидации
+	rules: {
+        form_name: {
+            required: true,
+        },
+        form_phone: {
+            required: true,
+        },
+
+    },
+	//Сообщения об ошибках
+    messages: {
+		form_name: {
+            required: "Обязательно укажите имя",
+        },
+		form_phone: {
+			required: "Укажите номер телефона",
+		},
+    },
+	
+	/*Отправка формы в случае успеха валидации*/
+    submitHandler: function(){
+         sendAjaxForm('feedback', 'mail.php'); //Вызываем функцию отправки формы
+		 return false; 
+    }
+	});
+});
+
+	function sendAjaxForm(feedback, url) {
+					$.ajax({
+						url:     url, //url страницы (mail.php)
+						type:     "POST", //метод отправки
+						dataType: "html", //формат данных
+						data: $("#"+feedback).serialize(),  // Сеарилизуем объекты формы
+						success: function(response) { //Данные отправлены успешно
+							
+							//Ваш код если успешно отправлено
+							alert('Успешно отправлено!');
+						},
+						error: function(response) { // Данные не отправлены
+							
+							//Ваш код если ошибка
+							alert('Ошибка отправления');
+						}
+					});
+
+}
+});

@@ -20,6 +20,10 @@ a{
     }
 }
 
+html{
+    margin-right: 0 !important;
+}
+
 body {
     font-family: 'Oswald-Regular';
 }
@@ -85,7 +89,7 @@ button{
         width: 376px;
     }
     @include mobile{
-        width: 300px;
+        width: 280px;
         font-size: 20px;
         margin-top: 0px;
     }
@@ -170,6 +174,222 @@ button{
     }
 }
 
+.form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-popup__field {
+    display: block;
+    border: none;
+}
+
+.form-popup{
+    position: fixed;
+    height: auto;
+    width: 35%;
+    z-index: 1000;
+    top: calc(50% - 256px);
+    left: calc(50% - 275px);
+    @include m-desk{
+        left: calc(50% - 236px);
+        top: calc(50% - 188px);
+    }
+    @include sm-desk{
+        top: calc(50% - 200px);
+        left: calc(50% - 215px);
+    }
+    @include mobile{
+        
+        left: calc(50% - 111px);
+    }
+    
+}
+.mfp-close{
+    
+    @include tablet{
+        display: none !important;
+    }
+    @include mobile{
+        display: none !important;
+    }
+}
+.form-popup__inputs{
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    position: absolute;
+    padding: 15px;
+    
+    @include m-desk{
+        width: 93%;
+    }
+    @include sm-desk{
+        width: 91%;
+    }
+    @include tablet{
+        width: 164%;
+    }
+    @include mobile{
+        width: 169%;
+    }
+}
+
+.form-popup{
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+    }
+    @include tablet{
+        flex-direction: column;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+.form-popup__name{
+    outline: none;
+    width: 100%;
+    height: 60px;
+    width: 622px;
+    border: none;
+    color: $white !important;
+    background-color: inherit;
+    font-weight: normal;
+    font-size: 20px;
+    &::placeholder{
+        color: $white;
+    }
+    @include m-desk{
+        font-size: 15px;
+        height: 40px;
+        width: 420px;
+    }
+    @include sm-desk{
+        font-size: 11px;
+        height: 40px;
+        width: 370px;
+    }
+    @include tablet{
+        font-size: 15px;
+        height: 40px;
+        margin: 5px 0;
+        width: 391px;
+    }
+    @include mobile{
+        font-size: 12px;
+        height: 30px;
+        margin: 5px 0;
+        width: 190px;
+    }
+    border-bottom: 1px solid $white;
+}
+
+
+.form-popup__description{
+    color: $lightgrey;
+    font-size: 15px;
+    line-height: 22px;
+    padding-top: 10px;
+    
+    @include m-desk{
+        font-size: 12px;
+        line-height: 18px;
+
+    }
+    @include sm-desk{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    @include tablet{
+        font-size: 12px;
+        line-height: 18px;
+        width: 60%;
+    }
+    
+    @include mobile{
+        font-size: 10px;
+        line-height: 15px;
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+}
+
+
+.form-popup__a{
+    color: $blue;
+    text-decoration: underline;
+    transition: .5s ease-out;
+    &:hover{
+        color: $lightgrey;
+    }
+}
+
+.form-popup__call{
+    color: $white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: start;
+    
+    @include m-desk{
+        font-size: 25px;
+    }
+    @include sm-desk{
+        font-size: 23px;
+    }
+    @include tablet{
+        font-size: 23px;
+    }@include mobile{
+        font-size: 23px;
+    }
+}
+
+.form-popup__button{
+    border: 1px solid $yellow;
+    color: #010101;
+    background:  $yellow;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 55px;
+    width: 627px;
+    &:hover{
+        border: 1px solid $white;
+        color: $white;
+    }
+    @include m-desk{
+        width: 422px;
+    }
+    @include sm-desk{
+        height: 45px;
+        width: 370px;
+    }
+    @include tablet{
+        font-size: 20px;
+        width: 391px;
+    }
+    @include mobile{
+        font-size: 20px;
+        width: 190px;
+        margin-top: 5px;
+    }
+}
 
 .mobileHeader{
     position: fixed;
@@ -1135,9 +1355,14 @@ button{
     }
 }
 
-.form__inputs{
+.form__con{
     display: flex;
     flex-direction: row;
+}
+
+.form__inputs{
+    display: flex;
+    flex-direction: column;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         /* display: none; <- Crashes Chrome on hover */
@@ -1212,6 +1437,8 @@ button{
         padding-top: 10px;
     }
 }
+
+
 
 .form__description{
     color: $lightgrey;
