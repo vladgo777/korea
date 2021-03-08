@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["name"]) && isset($_POST["email"]) ) { 
+if (isset($_POST["form_name"]) && isset($_POST["form_phone"]) ) { 
 
 $name = $_POST['form_name'];
 $phone = $_POST['form_phone']; 
@@ -24,5 +24,6 @@ $mes = "
 $send = mail ($my_email,$title,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$sender_email");
 
 }
+
 
 ?>

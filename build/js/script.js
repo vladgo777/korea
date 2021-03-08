@@ -1,3 +1,5 @@
+
+$( document ).ready(function() {
 function SmallText(i){
     $('.text-'+i).addClass('has-value');
     $('.label_text-'+i).addClass('has-value');
@@ -50,9 +52,13 @@ var menu1 = $(".mobileHeader");
     // } 
 });
 
-$('.button-style').magnificPopup();
+$('.openform').magnificPopup({
+    items: {
+        src: '#feedback11'
+      },
+      type: 'inline'
+});
 
-$( document ).ready(function() {
 	$('button[type="submit"]').click(function(){
 	
 	/*Валидация полей формы*/
@@ -71,9 +77,11 @@ $( document ).ready(function() {
     messages: {
 		form_name: {
             required: "Обязательно укажите имя",
+            required: "<style> .name {border-bottom: 1px solid #FF0000;} </style>",
         },
 		form_phone: {
 			required: "Укажите номер телефона",
+            required: "<style> .phone {border-bottom: 1px solid #FF0000;} </style>",
 		},
     },
 	
@@ -104,4 +112,59 @@ $( document ).ready(function() {
 					});
 
 }
+
+$('button[type="submit"]').click(function(){
+	
+	/*Валидация полей формы*/
+	$('#feedback2').validate({
+	//Правила валидации
+	rules: {
+        form_name: {
+            required: true,
+        },
+        form_phone: {
+            required: true,
+        },
+
+    },
+	//Сообщения об ошибках
+    messages: {
+		form_name: {
+            required: "Обязательно укажите имя",
+            required: "<style> .name {border-bottom: 1px solid #FF0000;} </style>",
+        },
+		form_phone: {
+			required: "Укажите номер телефона",
+            required: "<style> .phone {border-bottom: 1px solid #FF0000;} </style>",
+		},
+    },
+	
+	/*Отправка формы в случае успеха валидации*/
+    submitHandler: function(){
+         sendAjaxForm('feedback2', 'mail.php'); //Вызываем функцию отправки формы
+		 return false; 
+    }
+	});
 });
+
+	function sendAjaxForm(feedback, url) {
+					$.ajax({
+						url:     url, //url страницы (mail.php)
+						type:     "POST", //метод отправки
+						dataType: "html", //формат данных
+						data: $("#"+feedback).serialize(),  // Сеарилизуем объекты формы
+						success: function(response) { //Данные отправлены успешно
+							
+							//Ваш код если успешно отправлено
+							alert('Успешно отправлено!');
+						},
+						error: function(response) { // Данные не отправлены
+							
+							//Ваш код если ошибка
+							alert('Ошибка отправления');
+						}
+					});
+
+}
+});
+

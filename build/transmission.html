@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
     <meta name="viewport" content="width=device-width, height=device-height">
     <title>Корея Авто</title>
 </head>
@@ -34,9 +35,32 @@
             </div>
         </div>
 
+        <div   id="feedback11"  class="form-popup modal mfp-hide">
+            <form name="feedback" id="feedback" class="form form-popup__inputs" action="">
+                <h3 class="form-popup__call">Оставьте свой номер и мы вам перезвоним!</h3>
+                <fieldset class="form-popup__field">
+                    <!-- <span class="form__inputText">Имя</span> -->
+                    <input id="form__name" name="form_name" class="form-popup__name name" placeholder="Имя" type="text">
+                </fieldset>
+                <fieldset class="form-popup__field">
+                    <!-- <span class="form__inputText">Телефон</span> -->
+                    <input id="form_phone" name="form_phone" class="form-popup__name phone" placeholder="Телефон" type="number">
+                </fieldset>
+                <button type="submit" class="form-popup__button button-style">
+                    Перезвонить мне
+                </button>
+                <p class="form-popup__description">
+                    Нажимая на кнопку, вы принимаете <a href = "#"class = "form-popup__a">Положение</a> и <a href = "#" class = "form-popup__a">Согласие</a> на обработку персональных данных.
+                </p>
+            </form>
+        </div>
+
         <div class="mobileHeader">
             <div class="mobileHeader__content content1">
                 <div class="mobileHeader__li" >
+                    <a href="#feedback11"  class="mobileHeader__proposal1 openform button-style">
+                        Заказать звонок
+                    </a>
                     <a class="mobileHeader__link1" href="#proposal">Услуги</a>
                     <a class="mobileHeader__link1" href = "#footer">Контакты</a>
                 </div>
@@ -54,12 +78,12 @@
                     </a>
                 </div>
                 <div class="mobileHeader__rightSide">
-                    <a href="tel:+7 (975)-345-70-48" class="mobileHeader__link">
+                    <!-- <a href="tel:+7 (975)-345-70-48" class="mobileHeader__link">
                         +7 (975)-345-70-48
-                    </a>
-                    <button class="mobileHeader__proposal button-style">
+                    </a> -->
+                    <a href="#feedback11"  class="mobileHeader__proposal openform button-style">
                         Заказать звонок
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -69,36 +93,35 @@
                 <img src="img/wrench.png" alt="" class="big-banner__key">
                 <div class="big-banner__container">
                     <span class="big-banner__text">
-                        НА РЕМОНТ <br> И ОБСЛУЖИВАНИЕ <br>ДВИГАТЕЛЯ
+                        НОВЫМ КЛИЕНТАМ <br>
+                        ПЕРВАЯ ДИАГНОСТИКА
                     </span>
                     <span class="big-banner__saleText">
-                        СКИДКА 30%
+                        БЕСПЛАТНО!
                     </span>
-                    <button class="big-banner__proposal button-style">
+                    <a href="#feedback11" class="big-banner__proposal openform button-style">
                         Оставить заявку
-                    </button>
+                    </a>
                 </div>
                 <img src="img/car.png" class="big-banner__imgCar">
             </div>
         </div>
-
         <div class="table">
             <div class="table__content content1">
-                <h2 class="table__repair">Ремонт двигателя</h2>
-                <table class = "table__prices">
+                <h2 class="table__repair">Ремонт трансмиссии</h2>
+                <table class = "table__prices"><!-- Ремонт трансмиссии -->
                     <tr><th class = "col__1">Наименование работ</th><th class = "col__2">Н/ч</th><th class = "col__3">Цена (руб.)</th></tr>
-                    <tr><td class = "col__1">Замена сцепления</td><td class = "col__2">от 3 ч</td><td class = "col__3">от 3000</td></tr>
-                    <tr><td class = "col__1">Замена масла в МКПП</td><td class = "col__2">от 0,5 ч.</td><td class = "col__3">от 500</td></tr>
-                    <tr><td class = "col__1">Замена масла в АКПП</td><td class = "col__2">от 1 ч.</td><td class = "col__3">от 1000</td></tr>
-                    <tr><td class = "col__1">Замена датчика</td><td class = "col__2">от 0,3 ч.</td><td class = "col__3">от 300</td></tr>
-                    <tr><td class = "col__1">Ремонт МКПП</td><td class = "col__2">от 6 ч.</td><td class = "col__3">от 6000</td></tr>
-                    <tr><td class = "col__1">Замена АКПП</td><td class = "col__2">от 15 ч.</td><td class = "col__3">от 15000</td></tr>
-                    <tr><td class = "col__1">Снятие/установка МКПП</td><td class = "col__2">от 3 ч.</td><td class = "col__3">от 3000</td></tr>
-                    <tr><td class = "col__1">Снятие/установка АКПП</td><td class = "col__2">от 5 ч.</td><td class = "col__3">от 5000</td></tr>
-                </table>
+                        <tr><td class = "col__1">Замена сцепления</td><td class = "col__2">от 3 ч</td><td class = "col__3">от 3000</td></tr>
+                        <tr><td class = "col__1">Замена масла в МКПП</td><td class = "col__2">от 0,5 ч.</td><td class = "col__3">от 500</td></tr>
+                        <tr><td class = "col__1">Замена масла в АКПП</td><td class = "col__2">от 1 ч.</td><td class = "col__3">от 1000</td></tr>
+                        <tr><td class = "col__1">Замена датчика</td><td class = "col__2">от 0,3 ч.</td><td class = "col__3">от 300</td></tr>
+                        <tr><td class = "col__1">Ремонт МКПП</td><td class = "col__2">от 6 ч.</td><td class = "col__3">от 6000</td></tr>
+                        <tr><td class = "col__1">Замена АКПП</td><td class = "col__2">от 15 ч.</td><td class = "col__3">от 15000</td></tr>
+                        <tr><td class = "col__1">Снятие/установка МКПП</td><td class = "col__2">от 3 ч.</td><td class = "col__3">от 3000</td></tr>
+                        <tr><td class = "col__1">Снятие/установка АКПП</td><td class = "col__2">от 5 ч.</td><td class = "col__3">от 5000</td></tr>
+                    </table>
             </div>
         </div>
-
         <div class="description">
             <div class="description__content content1">
                 <img src="img/bg photo.png" alt="" class="description__imgWheel">
@@ -111,7 +134,7 @@
                         <img src="img/2 blok 3.png" alt="" class="description__icon">
                         <h3 class="description__advantage">Гарантия качества</h3>
                         <span class="description__textAdv1">В нашей работе мы используем только самые качественные материалы от производителей из Европы и Америки.</span>  
-                </div>
+                    </div>
                     <div class="description__cart">
                         <img src="img/2 blok 4.png" alt="" class="description__icon">
                         <h3 class="description__advantage">Прозрачная цена</h3>
@@ -144,14 +167,14 @@
             <div class="request-container__content content1">
                 <div class="request-container__inner">
                     <span class="request-container__text">
-                        Скидка на <br> диагностику авто
+                        Скидка на  диагностику авто
                     </span>
                     <p class="request-container__text2">
                         20%
                     </p>
-                    <button class="request-container__button button-style">
+                    <a href="#feedback11"  class="request-container__button openform button-style">
                         Оставить заявку
-                    </button>
+                    </a>
                 </div>
                 <img src="img/hand.png" alt="" class="request-container__imgHand">
             </div>
@@ -165,23 +188,25 @@
                     <span class="form__textCallback">И мы перезвоним в течение 10 минут!</span>  
                 </div>
                 <div class="form__container">
-                    <form action="" class="form__inputs">
-                        <fieldset class="form__field">
-                            <!-- <span class="form__inputText">Имя</span> -->
-                            <input id="form__name" name="form_name" class="form__name" placeholder="Имя" type="text">
-                        </fieldset>
-                        <fieldset class="form__field">
-                            <!-- <span class="form__inputText">Телефон</span> -->
-                            <input id="form__name" name="form_name" class="form__name" placeholder="Телефон" type="number">
-                        </fieldset>
+                    <form action="" id="feedback2" class="form__inputs">
+                        <div class="form__con">
+                            <fieldset class="form__field">
+                                <!-- <span class="form__inputText">Имя</span> -->
+                                <input id="form__name" name="form_name" class="form__name name" placeholder="Имя" type="text">
+                            </fieldset>
+                            <fieldset class="form__field">
+                                <!-- <span class="form__inputText">Телефон</span> -->
+                                <input id="form_phone" name="form_phone" class="form__name phone" placeholder="Телефон" type="number">
+                            </fieldset>
+                        </div>
+                        <p class="form__description">
+                            Нажимая на кнопку, вы принимаете <a href = "#"class = "form__a">Положение</a> и <a href = "#" class = "form__a">Согласие</a> на обработку персональных данных.
+                        </p>
+                        <button  type = "submit" class= "form__button button-style">
+                            Перезвонить мне
+                        </button>
                     </form>
-                    <p class="form__description">
-                        Нажимая на кнопку, вы принимаете <a href = "#"class = "form__a">Положение</a> и <a href = "#" class = "form__a">Согласие</a> на обработку персональных данных.
-                    </p>
                 </div>
-                <button class="form__button button-style">
-                    Перезвонить мне
-                </button>
             </div>
         </div>
 
@@ -256,9 +281,9 @@
                         <span class="proposal__sale">
                             СКИДКА 15% НА АВТОЗАПЧАСТИ ДЛЯ ПОСТОЯННЫХ КЛИЕНТОВ
                         </span>
-                        <button class="proposal__button button-style">
+                        <a href="#feedback11"  class="proposal__button openform button-style">
                             Оставить заявку
-                        </button>
+                        </a>
                     </div>
                     <img src="img/proposal__wheel.png" class="proposal__img1">
                     <img src="img/key.png" class="proposal__img2">
@@ -367,6 +392,8 @@
     </div>
     
     <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery.validate.min.js"></script>
+    <script src="js/libs/magnific-popup.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
