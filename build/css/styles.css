@@ -1095,7 +1095,7 @@ button {
   font-weight: bold;
   font-size: 180px;
   line-height: 250px;
-  color: #FDFDFC;
+  color: #707070;
   border-bottom: 1px solid #CCCCCC; }
   @media screen and (min-width: 1281px) and (max-width: 1550px) {
     .request-container__text2 {
@@ -1109,13 +1109,15 @@ button {
     .request-container__text2 {
       line-height: 200px;
       font-size: 150px;
-      margin-left: 25px; } }
+      margin-left: 25px;
+      color: #FDFDFC; } }
   @media screen and (min-width: 300px) and (max-width: 640px) {
     .request-container__text2 {
       font-size: 110px;
       line-height: 119px;
       width: 100%;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px;
+      color: #FDFDFC; } }
 
 .request-container__button {
   border: 1px solid #FFEB3B;

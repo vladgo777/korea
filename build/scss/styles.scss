@@ -1264,14 +1264,16 @@ button{
         line-height: 200px;
         font-size: 150px;
         margin-left: 25px;
+        color: $white;
     }
     @include mobile{
         font-size: 110px;
         line-height: 119px;
         width: 100%;
         margin-bottom: 20px;
+        color: $white;
     }
-    color: $white;
+    color: $grey;
     border-bottom: 1px solid #CCCCCC;
 }
 
