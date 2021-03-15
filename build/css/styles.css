@@ -474,6 +474,9 @@ button {
   margin-top: 0;
   height: 73px;
   width: 200px; }
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .mobileHeader__proposal {
+      height: 44px; } }
   .mobileHeader__proposal:hover {
     border: 1px solid #FDFDFC;
     color: #FDFDFC; }
@@ -483,7 +486,7 @@ button {
   color: #010101;
   background: #FFEB3B;
   margin-top: 0;
-  height: 73px;
+  height: 44px;
   width: 300px;
   display: none; }
   .mobileHeader__proposal1:hover {
@@ -491,6 +494,8 @@ button {
     color: #FDFDFC; }
   @media screen and (min-width: 300px) and (max-width: 640px) {
     .mobileHeader__proposal1 {
+      height: 44px;
+      width: 278px;
       display: block; } }
 
 .mobileHeader__img {
@@ -1090,7 +1095,7 @@ button {
   font-weight: bold;
   font-size: 180px;
   line-height: 250px;
-  color: #707070;
+  color: #FDFDFC;
   border-bottom: 1px solid #CCCCCC; }
   @media screen and (min-width: 1281px) and (max-width: 1550px) {
     .request-container__text2 {
@@ -1188,6 +1193,12 @@ button {
 .form__con {
   display: flex;
   flex-direction: row; }
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .form__con {
+      flex-direction: column; } }
+  @media screen and (min-width: 300px) and (max-width: 640px) {
+    .form__con {
+      flex-direction: column; } }
 
 .form__inputs {
   display: flex;
@@ -1543,7 +1554,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 60px; }
+  padding-top: 60px;
+  z-index: 150; }
   @media screen and (min-width: 1025px) and (max-width: 1280px) {
     .proposal__container {
       padding-top: 40px; } }

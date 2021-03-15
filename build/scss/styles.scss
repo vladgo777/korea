@@ -517,6 +517,9 @@ button{
     margin-top: 0;
     height: 73px;
     width: 200px;
+    @include tablet{        
+        height: 44px;
+    }
     &:hover{
         border: 1px solid $white;
         color: $white;
@@ -527,8 +530,8 @@ button{
     border: 1px solid $yellow;
     color: #010101;
     background:  $yellow;
-    margin-top: 0;
-    height: 73px;
+    margin-top: 0;     
+    height: 44px;
     width: 300px;
     &:hover{
         border: 1px solid $white;
@@ -536,6 +539,8 @@ button{
     }
     display: none;
     @include mobile{
+        height: 44px;
+        width: 278px;
         display: block;
     }
 }
@@ -1266,7 +1271,7 @@ button{
         width: 100%;
         margin-bottom: 20px;
     }
-    color: $grey;
+    color: $white;
     border-bottom: 1px solid #CCCCCC;
 }
 
@@ -1358,6 +1363,12 @@ button{
 .form__con{
     display: flex;
     flex-direction: row;
+    @include tablet{
+        flex-direction: column;
+    }
+    @include mobile{
+        flex-direction: column;
+    }
 }
 
 .form__inputs{
@@ -1774,6 +1785,7 @@ button{
     flex-direction: column;
     align-items: flex-end;
     padding-top: 60px;
+    z-index: 150;
     
     @include sm-desk{
         padding-top: 40px;
