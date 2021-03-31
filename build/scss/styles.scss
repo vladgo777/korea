@@ -34,6 +34,7 @@ body {
 
 button{
     cursor: pointer;
+    outline: none;
 }
 
 .content1{
@@ -185,24 +186,24 @@ button{
     border: none;
 }
 
-.form-popup{
+.form-popup {
     position: fixed;
-    height: auto;
-    width: 35%;
+    // height: 100%;
+    width: 100%;
     z-index: 1000;
     top: calc(50% - 256px);
-    left: calc(50% - 275px);
+    // left: calc(50% - 275px);
     @include m-desk{
-        left: calc(50% - 236px);
+        // left: calc(50% - 236px);
         top: calc(50% - 188px);
     }
     @include sm-desk{
         top: calc(50% - 200px);
-        left: calc(50% - 215px);
+        // left: calc(50% - 215px);
     }
     @include mobile{
-        
-        left: calc(50% - 111px);
+        top: 23%;
+        // left: calc(50% - 111px);
     }
     
 }
@@ -215,30 +216,30 @@ button{
         display: none !important;
     }
 }
-.form-popup__inputs{
+.form-popup__inputs {
     margin-right: auto;
     margin-left: auto;
-    width: 95%;
+    width: 35%;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $grey;
-    position: absolute;
+    background-color: #707070;
+    /* position: absolute; */
     padding: 15px;
-    
-    @include m-desk{
-        width: 93%;
-    }
-    @include sm-desk{
-        width: 91%;
-    }
+   
     @include tablet{
-        width: 164%;
+        width: 50%;
     }
     @include mobile{
-        width: 169%;
+        width: 87%;
+    }
+}
+
+@media (max-width: 900px){
+    .mfp-container {
+        padding: 0 !important;
     }
 }
 
@@ -265,7 +266,7 @@ button{
     outline: none;
     width: 100%;
     height: 60px;
-    width: 622px;
+    width: 95%;
     border: none;
     color: $white !important;
     background-color: inherit;
@@ -276,25 +277,26 @@ button{
     }
     @include m-desk{
         font-size: 15px;
-        height: 40px;
-        width: 420px;
+        height: 50px;
+        width: 95%;
     }
     @include sm-desk{
         font-size: 11px;
         height: 40px;
-        width: 370px;
+        width: 95%;
     }
     @include tablet{
-        font-size: 15px;
-        height: 40px;
-        margin: 5px 0;
-        width: 391px;
+        font-size: 17px;
+        height: 56px;
+        margin-bottom: 5px;
+        width: 100%;
     }
     @include mobile{
-        font-size: 12px;
-        height: 30px;
-        margin: 5px 0;
-        width: 190px;
+        font-size: 14px;
+        height: 54px;
+        margin-bottom: 5px;
+        /* margin: 5px 0; */
+        width: 100%;
     }
     border-bottom: 1px solid $white;
 }
@@ -318,7 +320,8 @@ button{
     @include tablet{
         font-size: 12px;
         line-height: 18px;
-        width: 60%;
+        width: 87%;
+        text-align: center;
     }
     
     @include mobile{
@@ -368,25 +371,25 @@ button{
     margin-right: 10px;
     margin-bottom: 10px;
     height: 55px;
-    width: 627px;
+    width: 95%;
     &:hover{
         border: 1px solid $white;
         color: $white;
     }
     @include m-desk{
-        width: 422px;
+        width: 95%;
     }
     @include sm-desk{
         height: 45px;
-        width: 370px;
+        width: 95%;
     }
     @include tablet{
         font-size: 20px;
-        width: 391px;
+        width: 100%;
     }
     @include mobile{
         font-size: 20px;
-        width: 190px;
+        width: 100%;
         margin-top: 5px;
     }
 }
@@ -488,6 +491,14 @@ button{
     }
 }
 
+.thankyou__leftSide{
+    @include mobile{
+        width: 100%;
+        justify-content: flex-end !important;
+    }
+}
+
+
 .mobileHeader__rightSide{
     display: flex;
     flex-direction: row;
@@ -559,7 +570,7 @@ button{
     width: 100%;
     left: 0px;
     top: 0px;
-    z-index: 150;
+    z-index: 200;
     background: none;
     padding-top: 50px;
     transition: .3s ease-out;
@@ -584,7 +595,39 @@ button{
     }
 }
 
+.header-thankyou{
+    background-color: $black ;
+    padding-bottom: 50px;  
+    @include m-desk{
+        padding-bottom: 20px;
+    }
+    @include sm-desk{
+        padding-bottom: 10px;
+    }
+}
 
+.mobileHeader-thankyou{
+    background-color: $black ;
+    padding: 30px 0 ;  
+}
+
+.header__content2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header__part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    @include sm-desk{
+        width: 25%;
+    }
+}
 
 .header__content{
     display: flex;
@@ -592,6 +635,8 @@ button{
     align-items: center;
     // justify-content: center;
 }
+
+
 
 .header__name{
     position: absolute;
@@ -650,6 +695,144 @@ button{
 //     background-repeat: no-repeat;
 //     width: 100%;
 // }
+
+
+.thankyou{
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 847px;
+    @include m-desk{
+        background-size: cover;
+        height: 847px;
+    }
+    @include sm-desk{ 
+        background-size: 100% 95%;
+        height: 500px;
+    }
+    @include tablet{
+        height: 800px;
+        background-size: auto 110%;
+    }
+    
+    @include mobile{
+        height: 600px;
+        background-size: 150% 100%;
+    }
+}
+
+.thankyou__text2{
+    padding: 20px 0 15px 0;
+    font-weight: 300;
+    color: $black;
+    font-family: 'Oswald-Light';
+    font-size: 25px;
+    @include m-desk{
+        font-size: 20px;
+    }
+    @include sm-desk{
+        font-size: 16px;
+    }
+    @include mobile{
+        font-size: 16px;
+    }
+}
+
+.thankyou__text{
+    padding: 20px 0 0 0;
+    font-weight: 300;
+    color: $black;
+    font-family: 'Oswald-Bold';
+    font-size: 25px;
+    @include m-desk{
+        font-size: 20px;
+    }
+    @include sm-desk{
+        font-size: 16px;
+    }
+    @include tablet{
+        padding: 0;
+    }
+    @include mobile{
+        padding: 0;
+        font-size: 16px;
+    }
+}
+
+.thankyou__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 39%;
+    @include sm-desk{
+        top: 35%;
+    }
+    @include tablet{
+        top: 37%;
+    }
+    @include mobile{
+        top: 33%;
+    }
+}
+
+.thankyou__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    width: 71%;
+    @include tablet{
+        width: auto;
+    }
+    @include mobile{
+        text-align: center;
+        width: auto;
+    }
+}
+
+.thankyou-header__link {
+    color: $black;
+    @include mobile{
+        font-size: 17px;
+    }
+   
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.thankyou__saleText{
+    padding: 35px 0;
+    font-family: 'Oswald-Bold';
+    color: $yellow;
+    text-shadow: -1.4px 1.4px 0px black;
+    letter-spacing: 3px;
+    line-height: 67px;
+    font-size: 75px;
+    @include m-desk{
+        line-height: 60px;
+        font-size: 62px;
+    }
+    @include sm-desk{
+        letter-spacing: 2px;
+        line-height: 30px;
+        font-size: 50px;
+    }
+    @include tablet{
+        font-weight: bold;
+        font-size: 69px;
+        line-height: 83px;
+    }
+    @include mobile{
+        font-size: 40px;
+        padding : 30px 0;
+        line-height: 54px;
+    }
+
+}
+
 
 .big-banner{
     background-image: url('../img/head.png') ; 
@@ -726,12 +909,12 @@ button{
     z-index: 100;
 }
 
-.big-banner__imgCar{
+.big-banner__imgCar {
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: -9%;
+    left: 21%;
     z-index: 50;
-    width: 1290px;
+    width: 1254px;
     @include m-desk{
         top: 40%;
         width: 1100px;
@@ -1523,10 +1706,20 @@ button{
     }
 }
 
+.form__name,
+.form-popup__name {
+    transition: .5s ease-out;
+}
+
+.error-form
+{
+    border-bottom: 1px solid #FF0000;
+}
+
 .proposal__content{
     display: flex;
     flex-direction: column;
-    top: 20%;
+    top: 13%;
     @include m-desk{
         top: 17%;
     }
@@ -1567,7 +1760,7 @@ button{
 
 
 .proposal__call{
-    bottom: 119%;
+    bottom: 107%;
     left: 40%;
     z-index: -10;
     width: 710px;
@@ -2309,6 +2502,7 @@ button{
     
     @include mobile {
         width: 100%;
+        z-index: 100;
     }
 }
 
